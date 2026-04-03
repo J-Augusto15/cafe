@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --main-color: #d3ad7f;
+    --black: #010103;
+    --orange: hsl(33, 71%, 49%);
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+body {
+    background-color: var(--black);
+    height: 500vh;
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.header {
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.header section {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/*.logo img {
+    width: 8%;
+    margin: 10px;
+    margin-left: 120px;
+}*/
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 2.3rem;
+}
+
+.icons img {
+    margin: 1rem;
+    cursor: pointer;
+    font-size: 2.3rem;
+}
+
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+.HomePage {
+    background: url(ChatGPT\ Image\ 3\ de\ abr.\ de\ 2026\,\ 23_02_43.png);
+    background-position: 480px;
+    background-repeat: no-repeat;
+    height: 120vh;
+}
+
+.content {
+    font-size: 30px;
+}
+
+.content h3 {
+    margin-top: 20rem;
+    font-size: 4rem;
+    color: aqua;
+    max-width: 40rem;
+}
+
+.Butao {
+    display: inline-block;
+    border-radius: 20rem;
+    background: var(--orange);
+    color: #fff;
+    position: relative;
+    left: -1rem;
+    top: 20px;
+    padding: 2rem 4rem;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.Butao:hover {
+    transform: scale(1.1);
+    /* aumenta */
+    background: hsl(24, 78%, 49%);
+    /* muda a cor */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Sobre-tittle {
+    font-size: 4rem;
+    margin-top: 5rem;
+    color: antiquewhite;
+}
+
+.Sobre {
+    font-size: 3rem;
+    margin-top: 1rem;
+    color: rgb(211, 188, 188);
+    border: 5px solid aqua;
+    border-radius: 3rem;
+    padding: 10px;
+}
+
+.Menu-tittle {
+    scroll-margin-top: 100px;
+    font-size: 3rem;
+    color: antiquewhite;
+    margin-top: 3rem;
+}
+
+.Menu {
+    color: #fff;
+    cursor: pointer;
+}
+
+.Menu h3 {
+    margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+    .header {
+        background-color: var(--black);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 99;
+    }
+
+    .header section {
+        font-size: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .navbar a {
+        margin: 0 1rem;
+        font-size: 1.4rem;
+        color: #fff
+    }
+
+    .navbar a:hover {
+        color: var(--main-color);
+        border-bottom: 0.1rem solid var(--main-color);
+        padding-bottom: 0.5rem;
+        font-size: 2.3rem;
+    }
+
+    .navbar {
+        display: table-column;
+
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items:  center;
+        text-align: center;
+    }
+
+    .content h3 {
+        font-size: 2.5rem;
+        text-align: left;
+        margin-bottom: 2rem;
+        margin-top: 12rem;
+    }
+
+    .HomePage {
+        height: auto;
+        padding: 5rem 1rem;
+    }
+
+    .Sobre-tittle{
+        font-size: 2.5rem;
+        margin-top: 1rem;
+    }
+    .Sobre{
+        font-size: 1.8rem;
+        text-align: justify;
+    }
+
+    .Menu {
+        flex-direction: column;
+        align-items: center;
+        font-size: 2rem;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+    .Menu-tittle{
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    .Menu h3{
+        margin-top: 40px;
+    }
+
+    .Butao {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+        position: relative;
+        left: -8rem;
+    }
+
+    .HomePage {
+    background: url(ChatGPT\ Image\ 3\ de\ abr.\ de\ 2026\,\ 23_02_43.png);
+    background-position: -100px;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: -40px
+    }
+}
