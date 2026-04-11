@@ -21,7 +21,7 @@
 
 body {
     background-color: var(--black);
-    height: 500vh;
+    height: 300vh;
 }
 
 section {
@@ -31,7 +31,8 @@ section {
 }
 
 .header {
-    background-color: rgba(0,0,0,0.4);
+    background-color: transparent;
+    backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     right: 0;
@@ -137,31 +138,174 @@ html {
     border-radius: 3rem;
     padding: 10px;
 }
-
-.Menu-tittle {
-    scroll-margin-top: 100px;
-    font-size: 3rem;
+.menu{
+    font-size: 4rem;
     color: antiquewhite;
-    margin-top: 3rem;
+    margin-top: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.Menu {
-    color: #fff;
+.card-1{
+    color: antiquewhite;
+    border: 10px solid red;
+    border-radius: 3rem;
+    width: 30rem;
+    height: 42rem;
+}
+.card-1 h3{
+    font-size: 2.5rem;
+    margin-left: 7rem;
+}
+.card-1 p{
+    font-size: 1.7rem;
+    margin: 2rem;
+}
+
+.card-1 img{
+    margin-left: 8rem;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 4rem;
+}
+.carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    transition: 0.3s;
+}
+
+.button {
+    margin-left: 7rem;
+    font-size: 2rem;
+    border: 10px solid var(--orange);
+    border-radius: 10px;
+    background-color: var(--orange);
+    width: 15rem;
+}
+.button:hover{
+    transform: scale(0.9);
+    font-size: 2.5rem;
     cursor: pointer;
 }
 
-.Menu h3 {
-    margin-top: 60px;
+.carrinho{
+    position: fixed;
+    top: 20px;
+    right: -300px;
+    width: 300px;
+    height: 400px;
+
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+
+    padding: 20px;
+    transition: 0.4s ease;
+
+    z-index: 2000;
+}
+.carrinho.ativo{
+    right: 20px;
 }
 
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.item h3 {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    flex: 1;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+    background: #eee;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.quantidade button {
+    border: none;
+    background: orange;
+    color: white;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.quantidade span {
+    margin: 0 10px;
+}
+.carrinho h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.carrinho p{
+    font-size: 1.5rem;
+    color: gray;
+}
+
+.fechar-button{
+    position: fixed;
+    background-color: red;
+    color: white;
+    border: 10px solid red;
+    border-radius: 2rem;
+    width: 27rem;
+    font-size: 1.5rem;
+    margin-top:auto;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+.fechar-button:hover{
+    transform: scale(1.0);
+    font-size: 2rem;
+    cursor: pointer;
+}
+.search-box {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 200px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+.search-box.active {
+    display: block;
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.icons-1 {
+    width: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.icons-1:hover {
+    transform: scale(1.2);
+}
 @media (max-width: 768px) {
     .header {
-        background-color: var(--black);
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 99;
+        background-color: transparent;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
     }
 
     .header section {
@@ -183,7 +327,7 @@ html {
         color: var(--main-color);
         border-bottom: 0.1rem solid var(--main-color);
         padding-bottom: 0.5rem;
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
 
     .navbar {
@@ -199,7 +343,7 @@ html {
     }
 
     .content h3 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         text-align: left;
         margin-bottom: 2rem;
         margin-top: 12rem;
@@ -229,14 +373,28 @@ html {
     .Menu-tittle{
         font-size: 2.5rem;
         margin-bottom: 40px;
+        margin-top: 10rem;
     }
     .Menu h3{
         margin-top: 40px;
     }
 
+    .button{
+        background-color: var(--orange);
+            border: 10px solid var(--orange);
+            color: #fff;
+            border-radius: 2rem;
+            width: 20rem;
+            font-size: 2.3rem;
+            margin-top: 1rem;
+            transition: 0.4s ease;
+            cursor: pointer;
+    }
+
     .Butao {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
         padding: 1rem 2rem;
+        border: 11px solid var(--orange);
         position: relative;
         left: -8rem;
     }
@@ -247,5 +405,10 @@ html {
     background-repeat: no-repeat;
     height: 100vh;
     margin-top: -40px
+    }
+    .search-box.active{
+        display: inline;
+        right: 20px;
+        top: 60px;
     }
 }
